@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rachit Agarwal | Product Manager Resume</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #f4f7fb;
+      color: #1e293b;
+      line-height: 1.6;
+      padding: 32px;
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+      background: white;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      color: white;
+      padding: 48px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .hero h1 {
+      font-size: 42px;
+      font-weight: 800;
+      margin-bottom: 10px;
+    }
+
+    .hero h2 {
+      font-size: 18px;
+      font-weight: 500;
+      opacity: 0.9;
+    }
+
+    .contact {
+      text-align: right;
+      font-size: 14px;
+      line-height: 1.9;
+    }
+
+    .contact a {
+      color: #bfdbfe;
+      text-decoration: none;
+    }
+
+    .main {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+    }
+
+    .sidebar {
+      background: #f8fafc;
+      padding: 36px 28px;
+      border-right: 1px solid #e2e8f0;
+    }
+
+    .content {
+      padding: 36px;
+    }
+
+    .section {
+      margin-bottom: 34px;
+    }
+
+    .section-title {
+      font-size: 15px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #2563eb;
+      margin-bottom: 18px;
+    }
+
+    .summary {
+      font-size: 15px;
+      color: #334155;
+    }
+
+    .skill-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .skill {
+      background: white;
+      border: 1px solid #dbeafe;
+      color: #1d4ed8;
+      padding: 8px 14px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .experience-card {
+      margin-bottom: 30px;
+      padding-bottom: 24px;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 16px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .role-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .company {
+      font-size: 16px;
+      font-weight: 600;
+      color: #2563eb;
+    }
+
+    .duration {
+      font-size: 14px;
+      color: #64748b;
+      font-weight: 500;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      color: #334155;
+      font-size: 14px;
+    }
+
+    .highlight-box {
+      background: linear-gradient(135deg, #eff6ff, #f8fafc);
+      border: 1px solid #dbeafe;
+      padding: 18px;
+      border-radius: 18px;
+      margin-top: 16px;
+    }
+
+    .metric {
+      font-size: 28px;
+      font-weight: 800;
+      color: #1d4ed8;
+    }
+
+    .metric-label {
+      font-size: 13px;
+      color: #475569;
+      margin-top: 4px;
+    }
+
+    .education-item,
+    .award-item {
+      margin-bottom: 18px;
+    }
+
+    .education-item h4,
+    .award-item h4 {
+      font-size: 15px;
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .education-item p,
+    .award-item p {
+      font-size: 14px;
+      color: #475569;
+    }
+
+    .footer {
+      padding: 18px;
+      text-align: center;
+      font-size: 12px;
+      color: #64748b;
+      border-top: 1px solid #e2e8f0;
+      background: #fafafa;
+    }
+
+    .btn-print {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #2563eb;
+      color: white;
+      border: none;
+      padding: 14px 20px;
+      border-radius: 999px;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(37, 99, 235, 0.3);
+      transition: 0.2s ease;
+    }
+
+    .btn-print:hover {
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 900px) {
+      .main {
+        grid-template-columns: 1fr;
+      }
+
+      .sidebar {
+        border-right: none;
+        border-bottom: 1px solid #e2e8f0;
+      }
+
+      .contact {
+        text-align: left;
+      }
+
+      .hero {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media print {
+      body {
+        padding: 0;
+        background: white;
+      }
+
+      .container {
+        box-shadow: none;
+        border-radius: 0;
+      }
+
+      .btn-print {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <section class="hero">
+      <div>
+        <h1>Rachit Agarwal</h1>
+        <h2>Product Strategy • Growth • Analytics • AI Product Management</h2>
+      </div>
+
+      <div class="contact">
+        <div>📍 Delhi NCR, India</div>
+        <div>📧 agarwalrachit42@gmail.com</div>
+        <div>🔗 <a href="#">linkedin.com/in/rachitagarwal</a></div>
+        <div>📱 Available for Product & Growth Roles</div>
+      </div>
+    </section>
+
+    <div class="main">
+      <aside class="sidebar">
+
+        <div class="section">
+          <div class="section-title">Profile</div>
+          <p class="summary">
+            Data-driven business and growth leader transitioning into Product Management with hands-on experience in analytics, growth strategy, monetization, experimentation, and cross-functional execution at scale.
+          </p>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Core Skills</div>
+          <div class="skill-grid">
+            <div class="skill">Product Strategy</div>
+            <div class="skill">Growth Analytics</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">A/B Testing</div>
+            <div class="skill">User Funnels</div>
+            <div class="skill">AI Products</div>
+            <div class="skill">Experimentation</div>
+            <div class="skill">PRDs & BRDs</div>
+            <div class="skill">Stakeholder Mgmt</div>
+            <div class="skill">Business Finance</div>
+            <div class="skill">Monetization</div>
+            <div class="skill">Customer Journey</div>
+            <div class="skill">Product Discovery</div>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Education</div>
+
+          <div class="education-item">
+            <h4>Bachelor's Degree</h4>
+            <p>Commerce & Business Background</p>
+          </div>
+
+          <div class="education-item">
+            <h4>Executive Learning</h4>
+            <p>AI Product Management & Product Strategy Learning Path</p>
+          </div>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Achievements</div>
+
+          <div class="award-item">
+            <h4>IDMA Award Winner 2024</h4>
+            <p>Contributed to award-winning data-driven marketing strategy delivering 40X sales growth.</p>
+          </div>
+
+          <div class="award-item">
+            <h4>Growth Leadership</h4>
+            <p>Led analytics and growth initiatives for high-scale education products at PhysicsWallah.</p>
+          </div>
+        </div>
+
+      </aside>
+
+      <main class="content">
+
+        <div class="section">
+          <div class="section-title">Professional Summary</div>
+          <p class="summary">
+            Experienced business and growth professional with a strong foundation in analytics, customer behavior, monetization, and product thinking. Currently leading growth and data initiatives at PhysicsWallah while actively transitioning into Product Management. Skilled at identifying user pain points, driving experimentation, aligning stakeholders, and building scalable product-led growth systems. Passionate about AI-powered products, user-centric experiences, and leveraging data for strategic decision-making.
+          </p>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Experience</div>
+
+          <div class="experience-card">
+            <div class="role-header">
+              <div>
+                <div class="role-title">Growth & Business Analytics Lead</div>
+                <div class="company">PhysicsWallah</div>
+              </div>
+              <div class="duration">2022 – Present</div>
+            </div>
+
+            <ul>
+              <li>Led data-driven growth initiatives across educational products and campaigns, enabling large-scale user acquisition and revenue optimization.</li>
+              <li>Collaborated closely with product, tech, marketing, finance, and operations teams to improve funnel performance and user engagement.</li>
+              <li>Built analytical frameworks and dashboards for leadership decision-making using SQL, BI tools, and business metrics.</li>
+              <li>Contributed to award-winning marketing strategy recognized at IDMA 2024 for delivering 40X sales growth and achieving best-seller status on Amazon.</li>
+              <li>Worked on scholarship and exam products such as PW-NSAT, focusing on user flows, registration optimization, and conversion improvement.</li>
+              <li>Participated in business finance and EBITDA-focused strategic initiatives to improve operational efficiency and monetization visibility.</li>
+              <li>Created BRDs and requirement documents for app/web workflows involving student onboarding and assessment systems.</li>
+              <li>Actively driving adoption of AI workflows and modern analytics systems for scalable business intelligence.</li>
+            </ul>
+
+            <div class="highlight-box">
+              <div class="metric">40X</div>
+              <div class="metric-label">Sales Growth Contribution Through Data-Driven Strategy</div>
+            </div>
+          </div>
+
+          <div class="experience-card">
+            <div class="role-header">
+              <div>
+                <div class="role-title">Product Management Transition Projects</div>
+                <div class="company">Independent / Internal Initiatives</div>
+              </div>
+              <div class="duration">2025 – Present</div>
+            </div>
+
+            <ul>
+              <li>Exploring AI Product Management, Retrieval-Augmented Generation (RAG), and LLM-powered product workflows.</li>
+              <li>Practicing PRD creation, product case studies, customer journey mapping, and feature prioritization frameworks.</li>
+              <li>Researching and benchmarking product-led growth strategies across EdTech and SaaS ecosystems.</li>
+              <li>Developing a stronger understanding of user psychology, retention loops, experimentation systems, and AI-native UX patterns.</li>
+              <li>Evaluating executive education and PM programs from institutions such as ISB and INSEAD to deepen product leadership capabilities.</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="section">
+          <div class="section-title">Selected Product-Oriented Work</div>
+
+          <ul>
+            <li>Designed requirement structures for scholarship exam landing pages supporting both scheduled and daily test formats.</li>
+            <li>Analyzed registration drop-offs and user journey friction points to improve onboarding conversion rates.</li>
+            <li>Worked with cross-functional teams to simplify information architecture and reduce unnecessary form fields.</li>
+            <li>Built KPI tracking systems for campaign attribution, funnel analysis, and operational performance monitoring.</li>
+            <li>Applied analytical insights to influence business and product-level strategic decisions.</li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <div class="section-title">Tools & Technologies</div>
+
+          <div class="skill-grid">
+            <div class="skill">SQL</div>
+            <div class="skill">Excel</div>
+            <div class="skill">Power BI</div>
+            <div class="skill">Python</div>
+            <div class="skill">Google Sheets</div>
+            <div class="skill">Amazon Redshift</div>
+            <div class="skill">Trino</div>
+            <div class="skill">Jira</div>
+            <div class="skill">Notion</div>
+            <div class="skill">Figma (Basic)</div>
+            <div class="skill">ChatGPT & AI Tools</div>
+          </div>
+        </div>
+
+      </main>
+    </div>
+
+    <div class="footer">
+      Built as a modern single-file PM resume • HTML + CSS + JavaScript
+    </div>
+  </div>
+
+  <button class="btn-print" onclick="window.print()">
+    Download / Print Resume
+  </button>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const cards = document.querySelectorAll('.experience-card, .section');
+
+      cards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(12px)';
+
+        setTimeout(() => {
+          card.style.transition = 'all 0.5s ease';
+          card.style.opacity = '1';
+          card.style.transform = 'translateY(0)';
+        }, index * 120);
+      });
+    });
+  </script>
+
+</body>
+</html>
